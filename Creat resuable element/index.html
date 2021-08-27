@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ 
+    <div id="root"></div>
+
+<!-- Adding React and React dom documents to create and render the components-->
+ <script src="https://unpkg.com/react@16.12.0/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16.12.0/umd/react-dom.development.js"></script>
+
+<!-- We need babel in the browser to compile the jsx code    -->
+<script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
+
+<!-- Adding babel      ... note... use babel instead of javascript-->
+<script type="text/babel"> 
+const rootElement = document.querySelector('#root') 
+// const message = <div className = "message" > Hello World </div>
+// const element = (
+// <div className= "containor">
+// {message}
+// {message}
+// </div>
+// )
+
+//Another method if we want to pass differnt values
+const message =  (props) => <div className = "message">{props.msg}</div>
+const element = ( 
+<div className = "containor">
+{message ({msg : "Hello World"})}
+{message ({msg : "GoodBye World"})}
+</div>
+
+)
+
+ReactDOM.render(element ,rootElement )
+</script>
+</body>
+</html>
