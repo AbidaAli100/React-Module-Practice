@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <div id="root"></div>
+
+ <!-- Adding React and React dom documents to create and render the components-->
+ <script src="https://unpkg.com/react@16.12.0/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16.12.0/umd/react-dom.development.js"></script>
+
+<!-- We need babel in the browser to compile the jsx code    -->
+<script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
+
+<!-- Adding babel      ... note... use babel instead of javascript-->
+<script type="text/babel"> 
+function tick(){
+const rootElement = document.getElementById('root')
+const time = new Date().toLocaleTimeString()
+const element = <div> <h1>The Time is</h1> <div><h2>{time}</h2></div>
+
+</div>
+
+ReactDOM.render(element, rootElement)}
+tick()
+setInterval(tick , 1000)
+
+</script>
+</body>
+</html>

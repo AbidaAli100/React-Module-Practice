@@ -29,16 +29,30 @@ const rootElement = document.querySelector('#root')
 // )
 
 //Another method if we want to pass differnt values
-const message =  (props) => <div className = "message">{props.msg}</div>
-const element = ( 
-<div className = "containor">
-{message ({msg : "Hello World"})}
-{message ({msg : "GoodBye World"})}
-</div>
+const Message =  (props) => <div className = "message">{props.msg}</div>
 
+// const element = ( 
+// <div className = "containor">
+// <message> Abida </message>
+
+//  {message ({msg : "Hello World"})} 
+//  {message ({msg : "GoodBye World"})} 
+
+// </div>
+// )
+
+// if we want to change it into jsx
+// look at the syntax
+const element1 = ( 
+<div className = "containor">
+<Message msg = "Hello JSX World"/> 
+<Message msg = "GoodBye"  />
+</div>
 )
 
-ReactDOM.render(element ,rootElement )
+
+ReactDOM.render(element1, rootElement )
+
 </script>
 </body>
 </html>
